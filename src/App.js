@@ -1,9 +1,36 @@
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import Particles from "react-particles-js";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 function App() {
   return (
-   <h2>Portfolio proyect...</h2>
+  <>
+  <Particles
+    className="Particles-canvas"
+    params={{
+      particles: {
+        number: {
+          value: 30,
+          density: {
+            enable: true,
+            vaule_arena: 900 
+          }
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 6,
+            color: "#f9ab00"
+          }
+        }
+      }
+    }}
+  />
+   <Navbar />
+   <Header />
+   </>
   );
 }
 
